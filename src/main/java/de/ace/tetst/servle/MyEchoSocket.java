@@ -91,9 +91,6 @@ public class MyEchoSocket {
 
 
         onMessage(session,msg);
-        Thread.dumpStack();
-//        System.out.printf("OUTSIDE:\n"+AgentDelegate.getEndUserMonitoringDelegate()
-//                .getFooter()+"\n\n--\n\n"+AgentDelegate.getEndUserMonitoringDelegate().getFooter()+"\n--");
 
         AgentDelegate.getEndUserMonitoringDelegate().filterEnd();
 
@@ -116,6 +113,8 @@ public class MyEchoSocket {
 
                 cmd2.setPayload("Hello "+cmd.getPayload().toLowerCase());
                 cmd2.setCmdId(cmd.getCmdId());
+
+                // Add Adrum Data to Message
                 cmd2.setAdrumData(wrapAdrum(AgentDelegate.getEndUserMonitoringDelegate()
                         .getFooter()));
 
@@ -152,6 +151,8 @@ public class MyEchoSocket {
             //]]>
             </script>
         */
+        System.out.println("F1:"+footer);
+        System.out.println("F2:"+AgentDelegate.getTransactionDemarcator().getUniqueIdentifierForTransaction());
         if (footer == null) return null;
         else {
             footer = footer.replaceAll("\n","").replaceAll("^[^\\\"]+(.*)\\];.*","$1")

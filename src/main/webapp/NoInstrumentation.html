@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>TEST Page</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script >
+        var connection = new WebSocket('ws://localhost:8881/WebsocketTestcase/wes');
+
+        function logServer(e){
+            console.log('Server: ' + e.data);
+        }
+        // Log messages from the server
+            connection.onmessage = logServer;
+
+        function guid() {
+            function s4() {
+                return Math.floor((1 + Math.random()) * 0x10000)
+                    .toString(16)
+                    .substring(1);
+            }
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+                s4() + '-' + s4() + s4() + s4();
+        }
+
+        // Used to periodically execute Target Page
+        // ////////////////////////////////////////
+        function executeCallback2 () {
+            executeCallback("#txt");
+            window.setTimeout(executeCallback2,5000);
+        }
+
+        function executeCallback (element) {
+
+
+            // Command to be send via WS
+            $(element).html("")
+            var uuid = guid();
+            var obj = '{'
+                +'"cmd" : "Echo",'
+                +'"payload"  : "world",'
+                +'"cmdId" : "'+uuid+'"'
+                +'}';
+            $(element).append("<p><b>Request:</b>"+obj+"</p>");
+
+
+
+
+            // Registring the return listener, The return listener will also retrieve the Correlation informaton
+            var oldChain = connection.onmessage;
+            connection.onmessage = function (resp) {
+                var cmd = JSON.parse(resp.data);
+                $(element).append("<p><b>Receiving: </b>" + cmd.cmdId + " <b>on UUID : </b>"+uuid+"  </p>");
+                if (cmd.cmd === "reply" && cmd.cmdId === uuid) {
+                    $(element).append("<p><b>Response:</b>" + cmd.payload + "</p>");
+
+
+
+                    console.log(cmd.adrumData)
+
+                  connection.onmessage = oldChain
+
+
+
+
+                } else oldChain(resp);
+                connection.onmessage = oldChain
+
+            };
+
+            // Finally: send the command. It'S best practice to register the listener BEFORE sending the command
+            connection.send(obj)
+
+
+        }
+    </script>
+
+    <script>
+        // Register Button Listeners
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                executeCallback("#txt");
+            });
+            $("#btn2").click(function(){
+                executeCallback2();
+            });
+        });
+    </script>
+
+
+
+
+</head>
+</script>
+
+<Body>
+    <h1>Websocket Test</h1>
+
+    <hr></hr>
+    <b>Value :</b> <p id="txt"></p>
+
+    <button id="btn">CallBack</button><button id="btn2">CallBack Repeat</button>
+<hr/>
+</Body>
+</html>
