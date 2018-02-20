@@ -1,0 +1,84 @@
+[Thread-0] 20 Feb 2018 09:32:00,612  INFO - Starting BT Logs at Tue Feb 20 09:32:00 CET 2018
+[Thread-0] 20 Feb 2018 09:32:00,612  INFO - ###########################################################
+[Thread-0] 20 Feb 2018 09:32:00,612  INFO - Using Java Agent Version [Server Agent v4.4.1.0 GA DEV-BUILD Date 2017-11-06 21:23:33]
+[Thread-0] 20 Feb 2018 09:32:00,612  INFO - Running IBM Java Agent [No]
+[qtp1118414398-29] 20 Feb 2018 09:32:17,560  INFO - BT [1] Name [/WebsocketTestcase/FullInstrumentation.html] Type [SERVLET] Custom [false]
+[qtp1118414398-29] 20 Feb 2018 09:32:17,560  INFO - Discovery Stack 
+Thread Name:qtp1118414398-29
+ID:29
+Time:Tue Feb 20 09:32:17 CET 2018
+State:RUNNABLE
+Priority:5
+
+org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java)
+org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+org.eclipse.jetty.server.Server.handle(Server.java:499)
+org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)
+org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)
+org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+java.lang.Thread.run(Thread.java:745)
+
+
+[qtp1118414398-34] 20 Feb 2018 09:32:18,315  INFO - BT [2] Name [/WebsocketTestcase/wes] Type [SERVLET] Custom [false]
+[qtp1118414398-34] 20 Feb 2018 09:32:18,315  INFO - Discovery Stack 
+Thread Name:qtp1118414398-34
+ID:34
+Time:Tue Feb 20 09:32:18 CET 2018
+State:RUNNABLE
+Priority:5
+
+org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java)
+org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+org.eclipse.jetty.server.Server.handle(Server.java:499)
+org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)
+org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)
+org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+java.lang.Thread.run(Thread.java:745)
+
+
+[qtp2083969860-45] 20 Feb 2018 09:32:59,021  INFO - BT [3] Name [WebSocketSample] Type [POJO] Custom [false]
+[qtp2083969860-45] 20 Feb 2018 09:32:59,022  INFO - Discovery Stack 
+Thread Name:qtp2083969860-45
+ID:45
+Time:Tue Feb 20 09:32:59 CET 2018
+State:RUNNABLE
+Priority:5
+
+de.ace.tetst.servle.MyEchoSocket.onMessage2(MyEchoSocket.java:92)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.eclipse.jetty.websocket.common.events.annotated.CallableMethod.call(CallableMethod.java:70)
+org.eclipse.jetty.websocket.common.events.annotated.OptionalSessionCallableMethod.call(OptionalSessionCallableMethod.java:68)
+org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onTextMessage(JettyAnnotatedEventDriver.java:234)
+org.eclipse.jetty.websocket.common.message.SimpleTextMessage.messageComplete(SimpleTextMessage.java:69)
+org.eclipse.jetty.websocket.common.events.AbstractEventDriver.appendMessage(AbstractEventDriver.java:65)
+org.eclipse.jetty.websocket.common.events.JettyAnnotatedEventDriver.onTextFrame(JettyAnnotatedEventDriver.java:226)
+org.eclipse.jetty.websocket.common.events.AbstractEventDriver.incomingFrame(AbstractEventDriver.java:161)
+org.eclipse.jetty.websocket.common.WebSocketSession.incomingFrame(WebSocketSession.java:309)
+org.eclipse.jetty.websocket.common.extensions.ExtensionStack.incomingFrame(ExtensionStack.java:214)
+org.eclipse.jetty.websocket.common.Parser.notifyFrame(Parser.java:220)
+org.eclipse.jetty.websocket.common.Parser.parse(Parser.java:258)
+org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.readParse(AbstractWebSocketConnection.java:632)
+org.eclipse.jetty.websocket.common.io.AbstractWebSocketConnection.onFillable(AbstractWebSocketConnection.java:480)
+org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+java.lang.Thread.run(Thread.java:745)
+
+

@@ -88,17 +88,17 @@ public class MyEchoSocket {
 
 
         AgentDelegate.getEndUserMonitoringDelegate().filterStart();
-
+        String trx = AgentDelegate.getTransactionDemarcator().beginOriginatingTransactionAndAddCurrentThread("WebSocketSample", null);
 
         onMessage(session,msg);
 
+        AgentDelegate.getTransactionDemarcator().endOriginatingTransactionAndRemoveCurrentThread();
         AgentDelegate.getEndUserMonitoringDelegate().filterEnd();
 
     }
 
     public void onMessage(Session session, String msg)
     {
-//        AgentDelegate.getEndUserMonitoringDelegate().filterStart();
 
         try {
             MSGCommand cmd = JSONUtil.decodeObject(msg, MSGCommand.class);
@@ -136,8 +136,6 @@ public class MyEchoSocket {
         } catch (TimeoutException e) {
             e.printStackTrace();
         } finally {
-
-//            AgentDelegate.getEndUserMonitoringDelegate().filterEnd();
 
         }
 

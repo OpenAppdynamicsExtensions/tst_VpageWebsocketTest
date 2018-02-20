@@ -1,0 +1,6 @@
+<multiple-inheritance-rules>
+    <instrumentation-properties>
+        <property name="dynamic-servlet-classes" value="org.eclipse.jetty.jsp.JettyJspServlet,de.ace.tetst.servle.WebSocketTest"/>
+        <property name="bci-fixer-other-classes" value="org.eclipse.jetty.websocket.servlet.UpgradeHttpServletRequest"/>
+    </instrumentation-properties>
+</multiple-inheritance-rules>

@@ -1,0 +1,52 @@
+[Thread-0] 20 Feb 2018 09:37:13,883  INFO - Starting BT Logs at Tue Feb 20 09:37:13 CET 2018
+[Thread-0] 20 Feb 2018 09:37:13,883  INFO - ###########################################################
+[Thread-0] 20 Feb 2018 09:37:13,883  INFO - Using Java Agent Version [Server Agent v4.4.1.0 GA DEV-BUILD Date 2017-11-06 21:23:33]
+[Thread-0] 20 Feb 2018 09:37:13,883  INFO - Running IBM Java Agent [No]
+[qtp1118414398-29] 20 Feb 2018 09:37:34,223  INFO - BT [1] Name [/WebsocketTestcase/FullInstrumentation.html] Type [SERVLET] Custom [false]
+[qtp1118414398-29] 20 Feb 2018 09:37:34,224  INFO - Discovery Stack 
+Thread Name:qtp1118414398-29
+ID:29
+Time:Tue Feb 20 09:37:34 CET 2018
+State:RUNNABLE
+Priority:5
+
+org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java)
+org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+org.eclipse.jetty.server.Server.handle(Server.java:499)
+org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)
+org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)
+org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+java.lang.Thread.run(Thread.java:745)
+
+
+[qtp1118414398-34] 20 Feb 2018 09:37:35,024  INFO - BT [2] Name [/WebsocketTestcase/wes] Type [SERVLET] Custom [false]
+[qtp1118414398-34] 20 Feb 2018 09:37:35,024  INFO - Discovery Stack 
+Thread Name:qtp1118414398-34
+ID:34
+Time:Tue Feb 20 09:37:35 CET 2018
+State:RUNNABLE
+Priority:5
+
+org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java)
+org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+org.eclipse.jetty.server.Server.handle(Server.java:499)
+org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)
+org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)
+org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+java.lang.Thread.run(Thread.java:745)
+
+

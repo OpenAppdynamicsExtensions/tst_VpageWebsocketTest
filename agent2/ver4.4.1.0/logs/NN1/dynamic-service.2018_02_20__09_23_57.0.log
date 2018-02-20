@@ -1,0 +1,5 @@
+[Thread-0] 20 Feb 2018 09:23:59,198  INFO com.singularity.dynamicservice.DynamicServiceManager - Scheduling DynamicServiceManager at interval of 30 seconds
+[AD Thread Pool-Global0] 20 Feb 2018 09:24:29,198  INFO com.singularity.dynamicservice.DynamicServiceManager - Using services directories [/vlab/development/test/SimpleWebAppTest/agent2/ver4.4.1.0/external-services, /vlab/development/test/SimpleWebAppTest/agent2/ver4.4.1.0/external-services/NN1]
+[AD Thread Pool-Global0] 20 Feb 2018 09:24:29,199  INFO com.singularity.dynamicservice.DynamicServiceManager - Mbean registration failed or not ready
+[AD Thread Pool-Global0] 20 Feb 2018 09:25:59,202  INFO com.singularity.dynamicservice.DynamicServiceMBeanManager - MBean AppDynamics:type=DynamicServiceManager is registered
+[AD Thread Pool-Global0] 20 Feb 2018 09:25:59,207  INFO com.singularity.dynamicservice.DynamicServiceManager - Service class name com.singularity.ee.service.analytics.Analytics

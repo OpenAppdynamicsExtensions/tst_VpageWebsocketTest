@@ -77,6 +77,7 @@
 
 
                     connection.onmessage = oldChain
+                    ADRUM.command ("addUserData", "customer_ghg", "6767");
 
 
                     // Wait for communication to end
@@ -119,7 +120,7 @@
 <script charset='UTF-8'>
     window['adrum-start-time'] = new Date().getTime();
     (function(config){
-        config.appKey = 'AD-AAB-AAF-SUG';
+        config.appKey = 'AD-AAB-AAH-NVM';
         config.adrumExtUrlHttp = 'http://localhost:8881/WebsocketTestcase/addev';
         config.adrumExtUrlHttps = 'https://localhost:8881/WebsocketTestcase/addev';
         config.beaconUrlHttp = 'http://col.eum-appdynamics.com';
@@ -137,6 +138,9 @@
             + " type='text/javascript' charset='UTF-8'"
             + unescape('%3E%3C/script%3E'));
     }
+
+    ADRUM.command ("addUserData", "customer_ghg", "6767");
+
 </script>
 
 <Body>
